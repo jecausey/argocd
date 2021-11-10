@@ -4,6 +4,7 @@ metadata:
   labels:
     app: jcdep
   name: jcdep
+  namespace: jhc
 spec:
   replicas: 2
   selector:
