@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: jcdep
+  name: jcdep
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jcdep
+  template:
+    metadata:
+      labels:
+        app: jcdep
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
